@@ -15,7 +15,7 @@
 // - supraincarcarea operatorului +, care sa efectueze concatenarea a doua liste circulare
 
 #include "CircularList.h"
-using namespace std;
+
 class CircularList {
 private:
     Node* first;
@@ -98,7 +98,7 @@ public:
     {
         if (!this->first||this->first->getNext()==this->first)
         {
-            return; // Lista este goala sau are un singur nod
+            return; //Lista este goala sau are un singur nod
         }
         Node* prev=nullptr;
         Node* current=this->first;
@@ -139,7 +139,7 @@ public:
         return newList;
     }
 
-    // Functie ajutatoare pentru determinarea dimensiunii listei
+    //Functie ajutatoare pentru determinarea dimensiunii listei
     int size() const
     {
         int count = 0;
@@ -155,7 +155,7 @@ public:
         return count;
     }
 
-    // Supraincarcarea operatorului <<
+    //Supraincarcarea operatorului <<
     friend std::ostream& operator<<(std::ostream& os, const CircularList& list)
     {
         Node* current = list.first;
@@ -171,7 +171,7 @@ public:
     }
 };
 
-// Functie pentru citirea, memorarea si afisarea a n obiecte complete din clasa CircularList
+//Functie pentru citirea, memorarea si afisarea a n obiecte complete din clasa CircularList
 void citireAfisareListeCirculare(int n)
 {
     CircularList* lists=new CircularList[n];
